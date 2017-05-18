@@ -1,0 +1,14 @@
+.clm-business {
+  margin-top: 20%;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+.container {
+  flex: 1;
+}
