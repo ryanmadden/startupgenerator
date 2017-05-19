@@ -1,13 +1,15 @@
 // You think you're pretty clever, huh?
 
 let prob_for = 0.5;
-let prob_av_prefix = 0.2;
+let prob_av_prefix = 0.1;
 let prob_mod_prefix = 0.3;
 
 let adverbs = [
   'Developing',
-  'Promoting',
-  'Enhancing'
+  'Enhancing',
+  'Delivering',
+  'Leveraging',
+  'Creating',
 ];
 
 let modifiers = [
@@ -24,6 +26,24 @@ let modifiers = [
   'Human-Centric',
   'Realtime',
   'Persistent',
+  'Reactive',
+  'Benchmarked',
+  'Superior',
+  'Structured',
+  'Analytical',
+  'Secure',
+  'Scalable',
+  'Interactive',
+  'Deployable',
+  'Flexible',
+  'Decentralized',
+  'Multi-Factor Authenticated',
+  'Streamlined',
+  'Imperative',
+  'Remote',
+  'High-Availability',
+  'On-Demand',
+  'Applied',
 ];
 
 let disciplines = [
@@ -34,7 +54,19 @@ let disciplines = [
   'Machine Learning',
   'Virtual Reality',
   'Accounting',
-  'POS'
+  'POS',
+  'Computer Vision',
+  'Grocery Delivery',
+  'Pet Tutoring',
+  'Drone Delivery',
+  'Blockchain',
+  'Messaging',
+  'E-Commerce',
+  'Microservice',
+  'IoT',
+  'Deep Learning',
+  'Quantum Computing',
+  'Chatbot'
 ];
 
 let targets = [
@@ -42,11 +74,15 @@ let targets = [
   'Systems',
   'Synergy',
   'Management',
-  'Teamwork',
   'Data',
   'SaaS',
   'Growth Hacking',
-  'Analysis'
+  'Analysis',
+  'Modeling',
+  'Trend Analysis',
+  'Data Visualization',
+  'Applications',
+  'JavaScript Frameworks',
 ];
 
 let getUnusedRandom = function(arr, used) {
@@ -63,7 +99,7 @@ let generateBusinessModel = function() {
 
   let result = [];
 
-  let mod = getUnusedRandom(modifiers, result, result);
+  let mod = getUnusedRandom(modifiers, result);
   let dis = getUnusedRandom(disciplines, result);
   let tar = getUnusedRandom(targets, result);
 
