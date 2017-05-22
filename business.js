@@ -44,6 +44,11 @@ let modifiers = [
   'High-Availability',
   'On-Demand',
   'Applied',
+  'Mobile',
+  'Personalized',
+  'Adaptable',
+  'Modern',
+  'Autonomous',
 ];
 
 let disciplines = [
@@ -66,7 +71,8 @@ let disciplines = [
   'IoT',
   'Deep Learning',
   'Quantum Computing',
-  'Chatbot'
+  'Chatbot',
+  'Engagement',
 ];
 
 let targets = [
