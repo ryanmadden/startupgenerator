@@ -2,7 +2,7 @@
 
 let prob_for = 0.5;
 let prob_av_prefix = 0.1;
-let prob_mod_prefix = 0.3;
+let prob_mod_prefix = 0.4;
 
 let adverbs = [
   'Developing',
@@ -10,6 +10,7 @@ let adverbs = [
   'Delivering',
   'Leveraging',
   'Creating',
+  'Orchestrating',
 ];
 
 let modifiers = [
@@ -49,13 +50,15 @@ let modifiers = [
   'Adaptable',
   'Modern',
   'Autonomous',
+  'Turing-Complete',
+  'Reducible',
+  'Social',
 ];
 
 let disciplines = [
   'Marketing',
   'Organization',
   'Infrastructure',
-  'Medical Marijuana',
   'Machine Learning',
   'Virtual Reality',
   'Accounting',
@@ -73,6 +76,8 @@ let disciplines = [
   'Quantum Computing',
   'Chatbot',
   'Engagement',
+  'File Sharing',
+  'Data Pipeline',
 ];
 
 let targets = [
@@ -82,18 +87,29 @@ let targets = [
   'Management',
   'Data',
   'SaaS',
-  'Growth Hacking',
   'Analysis',
   'Modeling',
   'Trend Analysis',
-  'Data Visualization',
   'Applications',
   'JavaScript Frameworks',
+  'Tracking',
+  'A/B Testing',
+  'Development',
+  'Mobile Apps',
+  'Progressive Web Apps',
+  'Databases',
+  'Dashboards',
+  'Visualizations',
+  'Data Mining',
+  'Data Analysis',
+
 ];
+
+let lastResult = [];
 
 let getUnusedRandom = function(arr, used) {
   let item = arr[Math.floor(Math.random() * arr.length)];
-  if (used.indexOf(item) == -1) {
+  if (used.indexOf(item) == -1 && lastResult.indexOf(item) == -1) {
     return item;
   }
   else {
@@ -122,6 +138,8 @@ let generateBusinessModel = function() {
     result = [getUnusedRandom(modifiers, result), ...result];
   }
 
+  lastResult = result;
+
   return result.join(' ');
 }
 
@@ -135,5 +153,4 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
 document.getElementById('reroll').addEventListener('click', function(event) {
   updateText();
-})
-
+});
